@@ -1,0 +1,43 @@
+data_dir = "~/.paperhub"
+
+[library]
+paths = ["~/Papers"]
+file_types = ["pdf", "docx", "md", "tex"]
+default_apply_mode = "index"
+
+[embedding]
+# tfidf 是离线词法基线。使用语义模型时安装 semantic extra 并填写本地路径。
+engine = "tfidf"
+model = ""
+
+[convert]
+output_dir = "~/.paperhub/output"
+timeout = 120
+pandoc_path = "auto"
+# 可选的路由声明（仅接受已实现引擎，不执行任意命令）
+routes = { "pdf->docx" = ["pdf_extract", "pandoc"] }
+
+[security]
+confirmation_ttl = 300
+allow_network_metadata = false
+
+[translate]
+default_backend = "openai"
+default_target_lang = "zh-CN"
+concurrency = 3
+max_retries = 2
+chunk_chars = 6000
+timeout = 60
+
+[translate.backends.openai]
+model = ""
+# 请填写自己账户可用的模型；API Key 仅从环境变量读取
+# input_per_million = 0.0
+# output_per_million = 0.0
+
+[translate.backends.anthropic]
+model = ""
+
+[plugins]
+timeout = 30
+
