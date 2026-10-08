@@ -1,0 +1,10 @@
+{
+  "name": "outline-example",
+  "version": "0.1.0",
+  "type": "outline",
+  "entry": "outline_example:ExamplePlugin",
+  "permissions": ["read_library", "read_topics"],
+  "min_core_version": "0.1.0",
+  "description": "A local outline plugin"
+}
+

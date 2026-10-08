@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "paperhub-outline-example"
+version = "0.1.0"
+requires-python = ">=3.11"
+description = "A dependency-free example PaperHub outline plugin"
+
+[project.entry-points."paperhub.outlines"]
+outline-example = "outline_example:ExamplePlugin"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/outline_example"]
+
