@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "paperhub": {
+      "command": "C:/path/to/reference_management_mcp/.venv/Scripts/paperhub-mcp.exe",
+      "args": ["--config", "C:/path/to/reference_management_mcp/paperhub.toml"]
+    }
+  }
+}
+
